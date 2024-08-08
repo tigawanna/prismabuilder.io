@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       const localTZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
       const streamDateInUTC = fromZonedTime(
-        new Date("2024-08-06 11:00 PM"),
+        new Date("2024-08-07 11:00 PM"),
         "America/Los_Angeles",
       );
 
@@ -138,7 +138,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               spacing="small"
               align="center"
               justify="center"
-              className="bg-[#9146FF] p-2"
+              className="bg-[#874BF6] p-2"
+              // className="bg-orange-600 p-2"
             >
               <svg className="w-4" viewBox="0 0 2400 2800">
                 <g>
@@ -166,8 +167,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               </svg>
               <Stack align="center" spacing="mini">
                 <p className="text-sm font-semibold text-white">
-                  TypeScript | Rust | Designing the UI for Prisma Schema Builder
-                  2
+                  Figuring out data storage for Prisma Schema Builder 2.
                 </p>{" "}
                 <a
                   href="https://twitch.tv/groenalbin"
@@ -186,7 +186,19 @@ function MyApp({ Component, pageProps }: AppProps) {
                       )}`
                     : "soon"}
                 </a>
-                <ArrowUpRightIcon className="w-4" /> 🎬
+                <ArrowUpRightIcon className="w-4 stroke-white" /> 🎬 &nbsp;
+                <a
+                  // href="https://www.youtube.com/watch?v=5KvO2cT3MnA"
+                  href="https://www.youtube.com/@albingroen"
+                  className="underline decoration-1 underline-offset-2 text-sm text-white font-medium animate-pulse"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  onClick={() => {
+                    setHasSeenNewsModal(false);
+                  }}
+                >
+                  YouTube
+                </a>
               </Stack>
             </Stack>
 
